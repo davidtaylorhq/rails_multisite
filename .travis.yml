@@ -4,6 +4,7 @@ language: ruby
 gemfile:
   - gemfiles/rails_4.gemfile
   - gemfiles/rails_5.gemfile
+  - gemfiles/rails_6.gemfile
   - gemfiles/rails_master.gemfile
 
 rvm:
