@@ -32,7 +32,7 @@ RSpec.configure do |config|
       configs = ActiveRecord::DatabaseConfigurations.new(YAML::load(File.open("spec/fixtures/database.yml")))
       ActiveRecord::Base.configurations = configs
     else
-      ActiveRecord::Base.configurations = YAML::load(File.open("spec/fixtures/database.yml"))
+      ActiveRecord::Base.configurations["test"] = YAML::load(File.open("spec/fixtures/database.yml"))["test"]
     end
   end
 
